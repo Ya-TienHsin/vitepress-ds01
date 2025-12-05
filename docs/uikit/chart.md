@@ -234,8 +234,8 @@ Highcharts.chart('PieChart', {
         type: 'pie' 
     },
     colors: [
-        '#00A19B', '#BDE3E2', '#007A7A', '#FC746F', '#FFC8C2', '#C92E34',
-        '#0083C9', '#93E6FE', '#00497D', '#00C08B', '#87E3BF', '#00735A'
+        '#00A19B', '#BDE3E2', '#007A7A', '#FF9900', '#FFD77A', '#D97B00',
+        '#0083C9', '#93E6FE', '#00497D', '#00C08B', '#87E3BF', '#00735A', '#D9D9D9', '#595959'
     ],
     title: {
           text: '圖表名稱',
@@ -327,7 +327,7 @@ Highcharts.chart('PieChart', {
             </tr>
             <tr>
                 <td>
-                    <b style="margin-bottom:16px;display: block;">圓餅圖Pie Chart & 環形圖Donut chart</b></br><p style="margin: 0px;" class="text-gray-11">依照比例大>小</p></br>
+                    <b style="margin-bottom:16px;display: block;">圓餅圖Pie Chart & 環形圖Donut chart</b></br><b style="margin: 0px;" class="text-gray-11">依照比例大>小</b></br>
                     <div style="display: flex;column-gap: 12px;margin-bottom:16px;flex-wrap: wrap;align-items: center;row-gap: 8px;">
                         <div><p style="margin: 0px;" class="text-gray-11">1.</p>
                         <img src="./overview/img/chart-4.svg" alt=""></div>
@@ -358,8 +358,23 @@ Highcharts.chart('PieChart', {
                         <div><p style="margin: 0px;" class="text-gray-11">14.</p>
                         <img src="./overview/img/chart-19.svg" alt=""></div>
                     </div>
-                    <img src="./overview/img/chart-20.png" alt="" width="100%">
-                    <p style="margin-bottom: 0px;" class="text-gray-11">依照產品</p>
+                    <img src="./overview/img/chart-20.png" alt="" width="80%" style="margin: 0 auto;">
+                    <b style="margin-bottom: 0px;" class="text-gray-11">依照產品</b>
+                    <div style="display: flex;column-gap: 12px;margin-bottom:16px;flex-wrap: wrap;align-items: center;row-gap: 8px;">
+                        <div><p style="margin: 0px;" class="text-gray-11">臺幣存款</p>
+                        <img src="./overview/img/chart-20.svg" alt=""></div>
+                        <div><p style="margin: 0px;" class="text-gray-11">外幣存款</p>
+                        <img src="./overview/img/chart-21.svg" alt=""></div>
+                        <div><p style="margin: 0px;" class="text-gray-11">投資</p>
+                        <img src="./overview/img/chart-22.svg" alt=""></div>
+                        <div><p style="margin: 0px;" class="text-gray-11">信用卡 <span style="color:#EF4343">*調整guideline色</span></p>
+                        <img src="./overview/img/chart-23.svg" alt=""></div>
+                        <div><p style="margin: 0px;" class="text-gray-11">證券</p>
+                        <img src="./overview/img/chart-24.svg" alt=""></div>
+                        <div><p style="margin: 0px;" class="text-gray-11">貸款</p>
+                        <img src="./overview/img/chart-25.svg" alt=""></div>
+                    </div>
+                    <img src="./overview/img/chart-26.svg" alt="" width="80%" style="max-width:350px;margin: 0 auto">
                 </td>
             </tr>
         </tbody>

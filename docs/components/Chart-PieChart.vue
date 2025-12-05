@@ -1,20 +1,16 @@
 
 <script setup>
 import { onMounted } from 'vue'
+import Highcharts from 'highcharts'
 
 onMounted(async () => {
-  const script = document.createElement('script')
-  script.src = 'https://code.highcharts.com/10.2.0/highcharts.js' // Highcharts CDN
-  document.head.appendChild(script)
-
-  script.onload = () => {
-    window.Highcharts.chart('PieChart', {
+    Highcharts.chart('PieChart', {
       chart: {
         type: 'pie'
       },
       colors: [
-        '#00A19B', '#BDE3E2', '#007A7A', '#FC746F', '#FFC8C2', '#C92E34',
-        '#0083C9', '#93E6FE', '#00497D', '#00C08B', '#87E3BF', '#00735A'
+        '#00A19B', '#BDE3E2', '#007A7A', '#FF9900', '#FFD77A', '#D97B00',
+        '#0083C9', '#93E6FE', '#00497D', '#00C08B', '#87E3BF', '#00735A', '#D9D9D9', '#595959'
       ],
       title: {
         text: '圖表名稱',
@@ -59,7 +55,6 @@ onMounted(async () => {
         enabled: false
       }
     });
-  }
 })
 </script>
 

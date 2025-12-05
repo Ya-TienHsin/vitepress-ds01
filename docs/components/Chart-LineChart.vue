@@ -1,13 +1,9 @@
 <script setup>
 import { onMounted } from 'vue'
+import Highcharts from 'highcharts'
 
-onMounted(async () => {
-  const script = document.createElement('script')
-  script.src = 'https://code.highcharts.com/10.2.0/highcharts.js' // Highcharts CDN
-  document.head.appendChild(script)
-
-  script.onload = () => {
-    window.Highcharts.chart('LineChart', {
+onMounted( () => {
+    Highcharts.chart('LineChart', {
       chart: { type: 'line' },
       title: { 
         text: '圖表名稱',
@@ -103,7 +99,6 @@ onMounted(async () => {
       }
 
     })
-  }
 })
 </script>
 
