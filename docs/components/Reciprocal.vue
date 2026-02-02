@@ -233,15 +233,15 @@
               const s = Math.floor((distance % (1000 * 60)) / 1000);
 
               // 使用 jQuery 的 .text() 更新內容
-              $('#days').text(d);
-              $('#hours').text(h);
-              $('#minutes').text(m);
-              $('#seconds').text(s);
+              $('.l-reciprocal #days').text(d);
+              $('.l-reciprocal #hours').text(h);
+              $('.l-reciprocal #minutes').text(m);
+              $('.l-reciprocal #seconds').text(s);
             } else {
               // 倒數結束後的處理
               clearInterval(timerInterval);
-              $('.title').text('優惠已結束');
-              $('.number').text('00');
+              $('.l-reciprocal .title').text('優惠已結束');
+              $('.l-reciprocal .number').text('00');
             }
           }
 

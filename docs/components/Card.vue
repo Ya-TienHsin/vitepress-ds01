@@ -110,7 +110,7 @@
   .l-card.type1 .l-card--title {
     margin-top: 12px;
     margin-bottom: 0px;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     font-weight: bold;
   }
@@ -131,7 +131,7 @@
 
   @media (min-width: 992px) {
     .l-card.type1 .l-card--title {
-      font-size: 24px;
+      font-size: 20px;
       margin-top: 16px;
     }
 
@@ -177,7 +177,7 @@
   .l-card.type2 .l-card--title {
     margin-top: 12px;
     margin-bottom: 0px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
   }
 
@@ -202,7 +202,7 @@
 
   @media (min-width: 992px) {
     .l-card.type2 .l-card--title {
-      font-size: 24px;
+      font-size: 20px;
       margin-top: 16px;
     }
 
@@ -242,7 +242,7 @@
   }
 
   .l-card.type3 .l-card--title {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .l-card.type3 svg {
@@ -263,7 +263,7 @@
     }
 
     .l-card.type3 .l-card--title {
-      font-size: 24px;
+      font-size: 20px;
     }
 
     .l-card.type3 svg {

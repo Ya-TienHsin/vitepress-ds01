@@ -1,4 +1,4 @@
-# Card 卡片
+# Card 卡片 <a style="display: inline-block;vertical-align: middle;margin: 0;margin-top: -8px;margin-right: 0;" href="https://www.figma.com/design/Fppf6fNXYu9MdCsQCY3ox0/%E5%85%83%E4%BB%B6%E6%AF%94%E8%BC%83%E8%A1%A8?node-id=77-38" target="_blank"><img style="max-width:32px" src="./overview/img/figma.svg" alt="" width=100%></a>
 > 卡片是由「不同但相關」的資訊在同一個版面上，資訊都只是簡短的摘要，如果要取得更多深入的內容必須透過點擊卡片跳轉到詳細資訊頁面。
 
 <script setup>
@@ -54,13 +54,13 @@
 ```css [css]
 /* Card_Type1 */
 .l-card.type1 {
-    background: #FFFFFF;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.24), 0px 5px 20px rgba(64, 157, 153, 0.2);
-    border-radius: 4px;
-    padding: 20px 32px;
-    padding-bottom: 40px;
-    display: inline-block;
-    max-width: 330px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.24), 0px 5px 20px rgba(64, 157, 153, 0.2);
+  border-radius: 4px;
+  padding: 20px 32px;
+  padding-bottom: 40px;
+  display: inline-block;
+  max-width: 330px;
 }
 
 .l-card.type1:hover {
@@ -78,7 +78,7 @@
 .l-card.type1 .l-card--title {
   margin-top: 12px;
   margin-bottom: 0px;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   font-weight: bold;
 }
@@ -99,7 +99,7 @@
 
 @media (min-width: 992px) {
   .l-card.type1 .l-card--title {
-  font-size: 24px;
+  font-size: 20px;
   margin-top: 16px;
   }
 
@@ -145,7 +145,7 @@
 .l-card.type2 .l-card--title {
   margin-top: 12px;
   margin-bottom: 0px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -170,7 +170,7 @@
 
 @media (min-width: 992px) {
   .l-card.type2 .l-card--title {
-  font-size: 24px;
+  font-size: 20px;
   margin-top: 16px;
   }
 
@@ -210,7 +210,7 @@
 }
 
 .l-card.type3 .l-card--title {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .l-card.type3 svg {
@@ -231,7 +231,7 @@
   }
 
   .l-card.type3 .l-card--title {
-  font-size: 24px;
+  font-size: 20px;
   }
 
   .l-card.type3 svg {
@@ -251,7 +251,7 @@
         <thead class="bg-primary-8">
             <tr>
                 <th scope="col"></th>
-                <th scope="col" colspan="3">(> 992px)</th>
+                <th scope="col" colspan="3">Large(≥992px)</th>
             </tr>
         </thead>
         <tbody>
@@ -264,15 +264,13 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="3">
-                    <b>整張卡片設定帶連結</b><br>
-                    <b>卡片：</b>
+                <td>
                     <ul class="pl-3 my-1">
-                        <li>box-shadow: 0 5px 20px rgba(64, 157, 153, 0.2), 0 1px 2px rgba(0, 0, 0, 0.24)</li>
-                        <li>border-radius:4px</li>
-                        <li>圖片：178x178px</li>
-                        <li>標題：font-size:24px/font-weight:bold /箭頭：9x16px</li>
-                        <li>內容：font-size:16px/line-height:1.5</li>
+                        <li>整張卡片設定帶連結</li>
+                        <li>文字：<br>標題 font-size:20px/font-weight:bold/color:$Primary-8 #00a19b<br>
+內文 font-size:16px/font-weight:regular/color:$Gray-11 #1C1C1C</li>
+                        <li>其他：<br>圓角 border-radius:4px<br>圖片 178x178px(可依需求調整)<br>陰影 box-shadow: 0 5px 20px rgba(64, 157, 153, 0.2), 0 1px 2px rgba(0, 0, 0, 0.24)</li>
+                        <li>icon：<br>文字後方箭頭 9x16px</li>
                     </ul>
                 </td>
             </tr>
@@ -281,14 +279,15 @@
                     <p class="text-gray-11">:hover</p>
                 </td>
                 <td>
-                    <img style="width: 100%;max-width:350px;" src="./overview/img/card-04.svg" alt="" width=100%>
+                    <img style="width: 100%;max-width:350px;" src="./overview/img/card-03.svg" alt="" width=100%>
                 </td>
             </tr>
             <tr>
                 <td colspan="3">
                     <ul class="pl-3 my-1">
-                        <b>卡片內容：</b>
-                        <li>opacity:0.7</li>
+                        <ul class="pl-3 my-1">
+                        <li>透明度 opacity:0.7</li>
+                    </ul>
                     </ul>
                 </td>
             </tr>
@@ -298,7 +297,7 @@
         <thead class="bg-primary-8">
             <tr>
                 <th scope="col"></th>
-                <th scope="col" colspan="3">(≤ 991px)</th>
+                <th scope="col" colspan="3">Large(< 992px)</th>
             </tr>
         </thead>
         <tbody>
@@ -312,15 +311,12 @@
             </tr>
             <tr>
                 <td colspan="3">
-                    <b>卡片：</b>
                     <ul class="pl-3 my-1">
-                        <li>box-shadow: 0 5px 20px rgba(64, 157, 153, 0.2), 0 1px 2px rgba(0, 0, 0, 0.24)</li>
-                        <li>border-radius:4px</li>
-                        <li>圖片：178x178px</li>
-                        <li>標題：font-size:20px/font-weight:bold /箭頭：9x16px</li>
-                        <li>內容：font-size:16px/line-height:1.5</li>
+                        <li>文字：<br>標題 font-size:18px/font-weight:bold/color:$Primary-8 #00a19b<br>
+內文 font-size:16px/font-weight:regular/color:$Gray-11 #1C1C1C</li>
+                        <li>其他：<br>圓角 border-radius:4px<br>圖片 300x180px(可依需求調整)</li>
                     </ul>
-                    <b>個別樣式同上</b>
+                    <b>其他設定同Large(≥992px)</b>
                 </td>
             </tr>
         </tbody>
@@ -332,14 +328,22 @@
         <thead class="bg-primary-8">
             <tr>
                 <th scope="col"></th>
-                <th scope="col" colspan="2">(> 992px)</th>
+                <th scope="col" colspan="2">Large(≥992px)</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td rowspan="2" class="bg-primary-2" scope="row">
+                <td rowspan="3" class="bg-primary-2" scope="row">
                     <p class="text-gray-11">:defualt</p>
                 </td>
+                <td>
+                    <b>CardType2-Basic</b>
+                </td>
+                <td>
+                    <b>CardType2-Line</b>
+                </td>
+            </tr>
+            <tr>
                 <td>
                     <img src="./overview/img/card-06.svg" alt="" width=100%>
                 </td>
@@ -349,22 +353,20 @@
             </tr>
             <tr>
                 <td>
-                    <b>整張卡片設定帶連結</b><br>
-                    <b>卡片：</b>
                     <ul class="pl-3 my-1">
-                        <li>border-radius:4px</li>
-                        <li>圖片：300x180px</li>
-                        <li>標題：font-size:24px/font-weight:bold</li>
-                        <li>內容&CTA：font-size:16px/line-height:1.5/箭頭：8x15px</li>
+                        <li>整張卡片設定帶連結</li>
+                        <li>文字：<br>標題 font-size:20px/font-weight:bold/color:$Primary-8 #00a19b<br>
+內容&CTA font-size:16px/font-weight:regular/color:$Gray-11 #1C1C1C</li>
+                        <li>其他：<br>圓角 border-radius:4px<br>圖片 300x180px(可依需求調整)</li>
+                        <li>icon：<br>CTA後方箭頭 8x15px</li>
                     </ul>
                 </td>
                 <td>
-                    <b>整張卡片設定帶連結</b><br>
-                    <b>卡片：</b>
                     <ul class="pl-3 my-1">
-                        <li>border:solid 1px #D9D9D9</li>
-                        <li>其他設定同 basic</li>
+                        <li>整張卡片設定帶連結</li>
+                        <li>其他：<br>邊框 border:solid 1px #D9D9D9</li>
                     </ul>
+                    <b>其他設定同 Basic</b>
                 </td>
             </tr>
             <tr>
@@ -381,15 +383,13 @@
             <tr>
                 <td>
                     <ul class="pl-3 my-1">
-                        <b>卡片內容：</b>
-                        <li>opacity:0.7</li>
+                        <li>透明度 opacity:0.7</li>
                     </ul>
                 </td>
                 <td>
                     <ul class="pl-3 my-1">
-                        <b>卡片內容：</b>
-                        <li>border:solid 1px #00A19B</li>
-                        <li>標題：opacity:0.7</li>
+                        <li>文字：<br>標題 opacity:0.7</li>
+                        <li>其他：<br>邊框 border:solid 1px #00a19b</li>
                     </ul>
                 </td>
             </tr>
@@ -399,14 +399,22 @@
         <thead class="bg-primary-8">
             <tr>
                 <th scope="col"></th>
-                <th scope="col" colspan="2">(≤ 991px)</th>
+                <th scope="col" colspan="2">Large(< 992px)</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td rowspan="2" class="bg-primary-2" scope="row">
+                <td rowspan="3" class="bg-primary-2" scope="row">
                     <p class="text-gray-11">:defualt</p>
                 </td>
+                <td>
+                    <b>CardType2-Basic</b>
+                </td>
+                <td>
+                    <b>CardType2-Line</b>
+                </td>
+            </tr>
+            <tr>
                 <td>
                     <img src="./overview/img/card-10.svg" alt="" width=100%>
                 </td>
@@ -416,20 +424,18 @@
             </tr>
             <tr>
                 <td>
-                    <b>卡片：</b>
                     <ul class="pl-3 my-1">
-                        <li>border-radius:4px</li>
-                        <li>圖片：300x180px</li>
-                        <li>標題：font-size:20px/font-weight:bold </li>
-                        <li>內容：font-size:16px/line-height:1.5/箭頭：8x15px</li>
+                        <li>文字：<br>標題 font-size:18px/font-weight:bold/color:$Primary-8 #00a19b<br>
+內容&CTA font-size:16px/font-weight:regular/color:$Gray-11 #1C1C1C</li>
+                        <li>其他：<br>圓角 border-radius:4px<br>圖片 300x180px(可依需求調整)</li>
+                        <li>icon：<br>CTA後方箭頭 8x15px</li>
                     </ul>
                 </td>
                 <td>
-                    <b>卡片：</b>
                     <ul class="pl-3 my-1">
-                        <li>border:solid 1px #D9D9D9</li>
-                        <li>其他設定同 basic</li>
+                        <li>其他：<br>邊框 border:solid 1px #D9D9D9</li>
                     </ul>
+                    <b>其他設定同 Basic</b>
                 </td>
             </tr>
         </tbody>
@@ -441,7 +447,7 @@
         <thead class="bg-primary-8">
             <tr>
                 <th scope="col"></th>
-                <th scope="col" colspan="2">(> 992px)</th>
+                <th scope="col" colspan="2">Large(≥992px)</th>
             </tr>
         </thead>
         <tbody>
@@ -455,14 +461,12 @@
             </tr>
             <tr>
                 <td>
-                    <b>整張卡片設定帶連結</b><br>
-                    <b>卡片：</b>
                     <ul class="pl-3 my-1">
-                        <li>border-radius:4px</li>
-                        <li>圖片：40x40px</li>
-                        <li>標題：font-size:24px/font-weight:bold</li>
-                        <li>內容：font-size:16px/line-height:1.5</li>
-                        <li>箭頭：18x34px</li>
+                        <li>整張卡片設定帶連結</li>
+                        <li>文字：<br>標題 font-size:20px/font-weight:bold/color:$Primary-8 #00a19b<br>
+內容&CTA font-size:16px/font-weight:regular/color:$Gray-11 #1C1C1C</li>
+                        <li>其他：<br>圓角 border-radius:4px<br>圖片 40x40px</li>
+                        <li>icon：<br>箭頭 18x34px</li>
                     </ul>
                 </td>
             </tr>
@@ -477,8 +481,7 @@
             <tr>
                 <td>
                     <ul class="pl-3 my-1">
-                        <b>卡片內容：</b>
-                        <li>opacity:0.7</li>
+                        <li>透明度 opacity:0.7</li>
                     </ul>
                 </td>
             </tr>
@@ -488,7 +491,7 @@
         <thead class="bg-primary-8">
             <tr>
                 <th scope="col"></th>
-                <th scope="col" colspan="2">(≤ 991px)</th>
+                <th scope="col" colspan="2">Large(< 992px)</th>
             </tr>
         </thead>
         <tbody>
@@ -502,14 +505,11 @@
             </tr>
             <tr>
                 <td>
-                    <b>卡片：</b>
                     <ul class="pl-3 my-1">
-                        <li>border-radius:4px</li>
-                        <li>圖片：40x40px</li>
-                        <li>標題：font-size:20px/font-weight:bold </li>
-                        <li>內容：font-size:16px/line-height:1.5</li>
-                        <li>箭頭：18x34px</li>
+                        <li>文字：<br>標題 font-size:18px/font-weight:bold/color:$Primary-8 #00a19b<br>
+內容&CTA font-size:16px/font-weight:regular/color:$Gray-11 #1C1C1C</li>
                     </ul>
+                    <b>其他設定同Large(≥992px)</b>
                 </td>
             </tr>
         </tbody>
