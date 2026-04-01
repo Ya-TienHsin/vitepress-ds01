@@ -2,8 +2,8 @@
 layout: doc
 sidebar: true
 ---
-# Chart 圖表
-> 將資料的差異對比和變化趨勢變得一目瞭然，有助於快速、有效地表達資料關係。
+# Chart 圖表 <a style="display: inline-block;vertical-align: middle;margin: 0;margin-top: -8px;margin-right: 0;" href="https://www.figma.com/design/Fppf6fNXYu9MdCsQCY3ox0/%E5%85%83%E4%BB%B6%E6%AF%94%E8%BC%83%E8%A1%A8?node-id=36-11" target="_blank"><img style="max-width:32px" src="./overview/img/figma.svg" alt="" width=100%></a>
+> 將資料的差異對比和變化趨勢變得一目瞭然，有助於快速、有效地表達資料關係。<br>圖表使用付費插件highcharts生成，目前官網使用v10.2版本
 
 <script setup>
     import LineChart from '../components/Chart-LineChart.vue'
@@ -310,7 +310,7 @@ Highcharts.chart('PieChart', {
                         <img src="./overview/img/chart-2.svg" alt="">
                         <p class="text-gray-11">銀行賣出、比較項目2</p>
                     </div>
-                    <img src="./overview/img/chart-3.jpg" alt="" width="100%">
+                    <img style="max-width: 600px;" src="./overview/img/chart-3.jpg" alt="" width="100%">
                 </td>
             </tr>
             <tr>
@@ -322,7 +322,7 @@ Highcharts.chart('PieChart', {
                         <img src="./overview/img/chart-5.svg" alt="">
                         <p class="text-gray-11">opacity:0.25 面積背景色</p>
                     </div>
-                    <img src="./overview/img/chart-6.jpg" alt="" width="100%">
+                    <img style="max-width: 600px;" src="./overview/img/chart-6.jpg" alt="" width="100%">
                 </td>
             </tr>
             <tr>
@@ -358,7 +358,7 @@ Highcharts.chart('PieChart', {
                         <div><p style="margin: 0px;" class="text-gray-11">14.</p>
                         <img src="./overview/img/chart-19.svg" alt=""></div>
                     </div>
-                    <img src="./overview/img/chart-20.png" alt="" width="80%" style="margin: 0 auto;">
+                    <img src="./overview/img/chart-20.png" alt="" width="80%" style="max-width:600px;margin:0 auto;">
                     <b style="margin-bottom: 0px;" class="text-gray-11">依照產品</b>
                     <div style="display: flex;column-gap: 12px;margin-bottom:16px;flex-wrap: wrap;align-items: center;row-gap: 8px;">
                         <div><p style="margin: 0px;" class="text-gray-11">臺幣存款</p>
@@ -374,7 +374,7 @@ Highcharts.chart('PieChart', {
                         <div><p style="margin: 0px;" class="text-gray-11">貸款</p>
                         <img src="./overview/img/chart-25.svg" alt=""></div>
                     </div>
-                    <img src="./overview/img/chart-26.svg" alt="" width="80%" style="max-width:350px;margin: 0 auto">
+                    <img src="./overview/img/chart-26.svg" alt="" width="80%" style="max-width:350px;margin:0 auto;">
                 </td>
             </tr>
         </tbody>

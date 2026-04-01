@@ -2,7 +2,7 @@
 layout: doc
 sidebar: true
 ---
-# Modals 彈跳視窗
+# Modals 彈跳視窗 <a style="display: inline-block;vertical-align: middle;margin: 0;margin-top: -8px;margin-right: 0;" href="https://www.figma.com/design/Fppf6fNXYu9MdCsQCY3ox0/%E5%85%83%E4%BB%B6%E6%AF%94%E8%BC%83%E8%A1%A8?node-id=1-13" target="_blank"><img style="max-width:32px" src="./overview/img/figma.svg" alt="" width=100%></a>
 > 會跳出到網頁的最上層，以向使用者傳達重要訊息、提示、警告或執行操作。
 
 <script setup>
@@ -446,71 +446,78 @@ sidebar: true
   }
 
   }
-  ```
-  ```js [js]
-  $('.scrollDown_btn').click(function () {
-    $(this).siblings('.scrollAreaWrapper').animate({
-      scrollTop: $(this).siblings('.scrollAreaWrapper').find('.scrollArea').height()
-    });
-    $(this).css('display', 'none');
-    $(this).parents('.scrollAreaWrapperOut').find('input').prop('disabled', false);
-    $(this).parents('.popup').find('.term-agree-btn').removeClass('btnDisabled')
-  })
-
-  function showPopup(whichpopup) {
-    $('#popup' + whichpopup).parent().fadeIn(200);
-    $('body').addClass('active-body');
-    $('#popup' + whichpopup).find('.scrollAreaWrapper').scroll(function () {
-
-      var clientHeight = $(this).height();
-      var scrollTop = $(this).scrollTop();
-
-      var scrollHeight = $(this).find(".scrollArea").height();
-      if (scrollTop + clientHeight + 1 >= scrollHeight) {
-
-        $(this).parents('.popup').find('.term-agree-btn').removeClass('btnDisabled')
-        $(this).siblings('.scrollDown_btn').css('display', 'none')
-
-        $(".term-open").click(function () {
-          $(this).find('.scrollAreaWrapper').animate({
-            scrollTop: (scrollHeight)
-          }, 0);
-        })
-        $(this).parents('.popup').find('.term-agree-btn').click(function () {
-          $(this).parents('.popup_term').find('input').attr("checked", true);
-          $(this).addClass('d-none')
-        })
-        $(this).parents('.popup_term').find('input').prop('disabled', false);
-      }
-    })
-    $('#popup' + whichpopup).find('.term-agree-btn').click(function () {
-      $(this).addClass('d-none')
-      $(this).parents('.popup_term').find('input').attr("checked", true).prop('disabled',false);
-    })
-  }
-
-  function closePopup() {
-    $('.overlay-bg').fadeOut(200);
-    $('body').removeClass('active-body');
-  };
-  
-  $('.show-popup').click(function (event) {
-    event.preventDefault();
-    var selectedPopup = $(this).data('showpopup');
-    showPopup(selectedPopup);
+```
+```js [js]
+// 1. 點擊「向下捲動」按鈕的處理 (捲動到底並啟用選項)
+$('.scrollDown_btn').click(function () {
+  $(this).siblings('.scrollAreaWrapper').animate({
+    scrollTop: $(this).siblings('.scrollAreaWrapper').find('.scrollArea').height()
   });
+  $(this).css('display', 'none');
+  $(this).parents('.scrollAreaWrapperOut').find('input').prop('disabled', false);
+  $(this).parents('.popup').find('.term-agree-btn').removeClass('btnDisabled');
+});
 
-  $('.close-btn, .overlay, .term-agree-btn').click(function () {
-    closePopup();
-    $('body').removeClass('active-body');
-  });
+// 2. 顯示彈窗及其內部邏輯 (包含捲軸監聽與同意按鈕處理)
+function showPopup(whichpopup) {
+  $('#popup' + whichpopup).parent().fadeIn(200);
+  $('body').addClass('active-body');
 
-  $(document).keyup(function (e) {
-    if (e.keyCode == 27) {
-      closePopup();
-      $('body').removeClass('active-body');
+  $('#popup' + whichpopup).find('.scrollAreaWrapper').scroll(function () {
+    var clientHeight = $(this).height();
+    var scrollTop = $(this).scrollTop();
+    var scrollHeight = $(this).find(".scrollArea").height();
+
+    if (scrollTop + clientHeight + 1 >= scrollHeight) {
+      $(this).parents('.popup').find('.term-agree-btn').removeClass('btnDisabled');
+      $(this).siblings('.scrollDown_btn').css('display', 'none');
+
+      $(".term-open").click(function () {
+        $(this).find('.scrollAreaWrapper').animate({
+          scrollTop: (scrollHeight)
+        }, 0);
+      });
+
+      $(this).parents('.popup').find('.term-agree-btn').click(function () {
+        $(this).parents('.popup_term').find('input').attr("checked", true);
+        $(this).addClass('d-none');
+      });
+      $(this).parents('.popup_term').find('input').prop('disabled', false);
     }
   });
+
+  $('#popup' + whichpopup).find('.term-agree-btn').click(function () {
+    $(this).addClass('d-none');
+    $(this).parents('.popup_term').find('input').attr("checked", true).prop('disabled', false);
+  });
+}
+
+// 3. 關閉彈窗函式
+function closePopup() {
+  $('.overlay-bg').fadeOut(200);
+  $('body').removeClass('active-body');
+};
+
+// 4. 點擊觸發顯示彈窗
+$('.show-popup').click(function (event) {
+  event.preventDefault();
+  var selectedPopup = $(this).data('showpopup');
+  showPopup(selectedPopup);
+});
+
+// 5. 點擊關閉按鈕、遮罩或同意按鈕時關閉彈窗
+$('.close-btn, .overlay, .term-agree-btn').click(function () {
+  closePopup();
+  $('body').removeClass('active-body');
+});
+
+// 6. 監聽 Esc 鍵關閉彈窗
+$(document).keyup(function (e) {
+  if (e.keyCode == 27) {
+    closePopup();
+    $('body').removeClass('active-body');
+  }
+});
 
 ```
 :::

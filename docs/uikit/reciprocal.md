@@ -210,7 +210,7 @@ $(document).ready(function () {
         <thead class="bg-primary-8">
             <tr>
                 <th scope="col"></th>
-                <th scope="col" colspan="3">Large(< 992px)</th>
+                <th scope="col" colspan="3">(< 992px)</th>
             </tr>
         </thead>
         <tbody>

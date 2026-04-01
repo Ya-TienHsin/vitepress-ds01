@@ -2,7 +2,7 @@
 layout: doc
 sidebar: true
 ---
-# Tooltips 工具提示
+# Tooltips 工具提示  <a style="display: inline-block;vertical-align: middle;margin: 0;margin-top: -8px;margin-right: 0;" href="https://www.figma.com/design/Fppf6fNXYu9MdCsQCY3ox0/%E5%85%83%E4%BB%B6%E6%AF%94%E8%BC%83%E8%A1%A8?node-id=1-4" target="_blank"><img style="max-width:32px" src="./overview/img/figma.svg" alt="" width=100%></a>
 > 當使用者將游標懸停時，彈出一個視窗顯示該元素的相關資訊或說明。
 
 <script setup>

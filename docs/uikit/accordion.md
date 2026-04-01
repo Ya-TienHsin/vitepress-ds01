@@ -1,4 +1,4 @@
-# Accordion 手風琴
+# Accordion 手風琴  <a style="display: inline-block;vertical-align: middle;margin: 0;margin-top: -8px;margin-right: 0;" href="https://www.figma.com/design/Fppf6fNXYu9MdCsQCY3ox0/%E5%85%83%E4%BB%B6%E6%AF%94%E8%BC%83%E8%A1%A8?node-id=1-8" target="_blank"><img style="max-width:32px" src="./overview/img/figma.svg" alt="" width=100%></a>
 > 主要用途是在單一頁面中有效管理和展示大量、分區塊的內容，透過點擊標題來展開/收合相關內容，常應用於常見問題(FAQ)、產品規格、多層次選單等場景。 
 
 <script setup>
@@ -135,7 +135,7 @@ $('.l-accordion--title').click(function(){
         <thead class="bg-primary-8">
             <tr>
                 <th scope="col"></th>
-                <th scope="col" colspan="3">(>992px)</th>
+                <th scope="col" colspan="3">Small(≥ 576px)</th>
             </tr>
         </thead>
         <tbody>
@@ -144,7 +144,7 @@ $('.l-accordion--title').click(function(){
                     <p class="text-gray-11">:defualt</p>
                 </td>
                 <td>
-                    <img src="./overview/img/accordion-1.svg" alt="" width=100%>
+                    <img style="max-width: 800px;" src="./overview/img/accordion-1.svg" alt="" width=100%>
                 </td>
             </tr>
             <tr>
@@ -179,7 +179,7 @@ $('.l-accordion--title').click(function(){
                     <p class="text-gray-11">Group</p>
                 </td>
                 <td>
-                    <img src="./overview/img/accordion-2.svg" alt="" width=100%>
+                    <img style="max-width: 800px;" src="./overview/img/accordion-2.svg" alt="" width=100%>
                 </td>
             </tr>
         </tbody>
@@ -188,7 +188,7 @@ $('.l-accordion--title').click(function(){
         <thead class="bg-primary-8">
             <tr>
                 <th scope="col"></th>
-                <th scope="col" colspan="3">(≤ 991px)</th>
+                <th scope="col" colspan="3">X-Small(< 576px)</th>
             </tr>
         </thead>
         <tbody>
@@ -197,7 +197,7 @@ $('.l-accordion--title').click(function(){
                     <p class="text-gray-11">:defualt</p>
                 </td>
                 <td>
-                    <img src="./overview/img/accordion-3.svg" alt="" width=100%>
+                    <img style="max-width: 500px;" src="./overview/img/accordion-3.svg" alt="" width=100%>
                 </td>
             </tr>
             <tr>
@@ -217,7 +217,7 @@ $('.l-accordion--title').click(function(){
                     <p class="text-gray-11">Group</p>
                 </td>
                 <td>
-                    <img src="./overview/img/accordion-4.svg" alt="" width=100%>
+                    <img style="max-width: 500px;" src="./overview/img/accordion-4.svg" alt="" width=100%>
                 </td>
             </tr>
         </tbody>

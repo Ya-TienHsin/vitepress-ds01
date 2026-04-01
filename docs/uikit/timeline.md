@@ -252,7 +252,7 @@
                     <p class="text-gray-11">:defualt</p>
                 </td>
                 <td>
-                    <img style="width: 100%;" src="./overview/img/timeline-1.svg" alt="" width=100%>
+                    <img style="width: 100%;max-width: 900px;" src="./overview/img/timeline-1.svg" alt="" width=100%>
                 </td>
             </tr>
             <tr>
@@ -297,7 +297,7 @@
         <thead class="bg-primary-8">
             <tr>
                 <th scope="col"></th>
-                <th scope="col" colspan="3">Medium(< 768px)</th>
+                <th scope="col" colspan="3">(< 768px)</th>
             </tr>
         </thead>
         <tbody>

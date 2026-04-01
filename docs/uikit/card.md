@@ -297,7 +297,7 @@
         <thead class="bg-primary-8">
             <tr>
                 <th scope="col"></th>
-                <th scope="col" colspan="3">Large(< 992px)</th>
+                <th scope="col" colspan="3">(< 992px)</th>
             </tr>
         </thead>
         <tbody>
@@ -345,10 +345,10 @@
             </tr>
             <tr>
                 <td>
-                    <img src="./overview/img/card-06.svg" alt="" width=100%>
+                    <img style="max-width:400px" src="./overview/img/card-06.svg" alt="" width=100%>
                 </td>
                 <td>
-                    <img src="./overview/img/card-07.svg" alt="" width=100%>
+                    <img style="max-width:400px" src="./overview/img/card-07.svg" alt="" width=100%>
                 </td>
             </tr>
             <tr>
@@ -374,10 +374,10 @@
                     <p class="text-gray-11">:hover</p>
                 </td>
                 <td>
-                    <img src="./overview/img/card-08.svg" alt="" width=100%>
+                    <img style="max-width:400px" src="./overview/img/card-08.svg" alt="" width=100%>
                 </td>
                 <td>
-                    <img src="./overview/img/card-09.svg" alt="" width=100%>
+                    <img style="max-width:400px" src="./overview/img/card-09.svg" alt="" width=100%>
                 </td>
             </tr>
             <tr>
@@ -399,7 +399,7 @@
         <thead class="bg-primary-8">
             <tr>
                 <th scope="col"></th>
-                <th scope="col" colspan="2">Large(< 992px)</th>
+                <th scope="col" colspan="2">(< 992px)</th>
             </tr>
         </thead>
         <tbody>
@@ -416,10 +416,10 @@
             </tr>
             <tr>
                 <td>
-                    <img src="./overview/img/card-10.svg" alt="" width=100%>
+                    <img style="max-width:400px" src="./overview/img/card-10.svg" alt="" width=100%>
                 </td>
                 <td>
-                    <img src="./overview/img/card-11.svg" alt="" width=100%>
+                    <img style="max-width:400px" src="./overview/img/card-11.svg" alt="" width=100%>
                 </td>
             </tr>
             <tr>
@@ -456,7 +456,7 @@
                     <p class="text-gray-11">:defualt</p>
                 </td>
                 <td>
-                    <img src="./overview/img/card-12.svg" alt="" width=100%>
+                    <img style="max-width: 600px;" src="./overview/img/card-12.svg" alt="" width=100%>
                 </td>
             </tr>
             <tr>
@@ -475,7 +475,7 @@
                     <p class="text-gray-11">:hover</p>
                 </td>
                 <td>
-                    <img src="./overview/img/card-13.svg" alt="" width=100%>
+                    <img style="max-width: 600px;" src="./overview/img/card-13.svg" alt="" width=100%>
                 </td>
             </tr>
             <tr>
@@ -491,7 +491,7 @@
         <thead class="bg-primary-8">
             <tr>
                 <th scope="col"></th>
-                <th scope="col" colspan="2">Large(< 992px)</th>
+                <th scope="col" colspan="2">(< 992px)</th>
             </tr>
         </thead>
         <tbody>
@@ -500,7 +500,7 @@
                     <p class="text-gray-11">:defualt</p>
                 </td>
                 <td>
-                    <img src="./overview/img/card-14.svg" alt="" width=100%>
+                    <img style="max-width: 600px;" src="./overview/img/card-14.svg" alt="" width=100%>
                 </td>
             </tr>
             <tr>

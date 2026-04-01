@@ -2,7 +2,7 @@
 layout: doc
 sidebar: true
 ---
-# Filters 篩選器
+# Filters 篩選器 <a style="display: inline-block;vertical-align: middle;margin: 0;margin-top: -8px;margin-right: 0;" href="https://www.figma.com/design/Fppf6fNXYu9MdCsQCY3ox0/%E5%85%83%E4%BB%B6%E6%AF%94%E8%BC%83%E8%A1%A8?node-id=2104-2087" target="_blank"><img style="max-width:32px" src="./overview/img/figma.svg" alt="" width=100%></a>
 > 透過條件的設定篩選資料庫，只顯示想要看到的資料。
 
 <script setup>
@@ -77,64 +77,47 @@ vertical-align: middle;
 }
 ```
 ```js [js]
-const buttons = document.querySelectorAll('.l-filters--btn');
-    const btnAll = document.querySelector('.btnAll');
-
-    buttons.forEach(button => {
-      // 排除 btnMore，不做 active 切換或改變 btnAll 狀態
-      if (button.classList.contains('btnMore')) {
-        return; 
-      }
-
-      button.addEventListener('click', () => {
-        button.classList.toggle('active');
-        if (btnAll.classList.contains('active')) {
-          btnAll.classList.remove('active');
-        }
-      });
-    });
-
-    if (btnAll) {
-      btnAll.addEventListener('click', () => {
-        buttons.forEach(button => {
-          button.classList.remove('active');
-        });
-        btnAll.classList.add('active');
-      });
-    }
-
-    const btnGroup = document.querySelector('.l-filters--btnGroup');
-    const btnMore = document.querySelector('.btnMore');
-    const btnGroupBtns = btnGroup.querySelectorAll('.l-filters--btn');
+$(document).ready(function () {
+    const $buttons = $('.l-filters--btn');
+    const $btnAll = $('.btnAll');
+    const $btnGroup = $('.l-filters--btnGroup');
+    const $btnMore = $('.btnMore');
+    const $btnGroupBtns = $btnGroup.find('.l-filters--btn');
     const maxVisible = 10;
 
-    if (btnGroupBtns.length > maxVisible) {
-      for (let i = maxVisible; i < btnGroupBtns.length; i++) {
-        btnGroupBtns[i].style.display = 'none';
-      }
-      btnMore.style.display = 'inline-block';
-      btnMore.textContent = '更多';
+    // 1. 一般按鈕點擊處理 (排除 .btnMore)
+    $buttons.not('.btnMore').on('click', function () {  
+        $(this).toggleClass('active');
+        $btnAll.removeClass('active');
+    });
+
+    // 2. 「全部」按鈕點擊處理
+    $btnAll.on('click', function () {
+        $buttons.removeClass('active');
+        $(this).addClass('active');
+    });
+
+    // 3. 初始化「更多」按鈕顯示邏輯
+    if ($btnGroupBtns.length > maxVisible) {
+        $btnGroupBtns.slice(maxVisible).hide(); // 隱藏索引 10 之後的按鈕
+        $btnMore.show().text('更多');
     } else {
-      btnMore.style.display = 'none';
+        $btnMore.hide();
     }
 
-    if (btnMore) {
-      btnMore.addEventListener('click', () => {
-        // btnMore 點擊不會改變 btnAll 狀態或任何 active 狀態
-        const isExpanded = btnMore.textContent === '收合';
+    // 4. 「更多」按鈕展開/收合處理
+    $btnMore.on('click', function () {
+        const isExpanded = $(this).text() === '收合';
+
         if (isExpanded) {
-          for (let i = maxVisible; i < btnGroupBtns.length; i++) {
-            btnGroupBtns[i].style.display = 'none';
-          }
-          btnMore.textContent = '更多';
+            $btnGroupBtns.slice(maxVisible).hide();
+            $(this).text('更多');
         } else {
-          for (let i = maxVisible; i < btnGroupBtns.length; i++) {
-            btnGroupBtns[i].style.display = 'inline-block';
-          }
-          btnMore.textContent = '收合';
-        }
-      });
-    }
+            $btnGroupBtns.slice(maxVisible).css('display', 'inline-block');
+            $(this).text('收合');
+        }       
+    });
+  }
 ```
 :::
 
@@ -200,7 +183,7 @@ const buttons = document.querySelectorAll('.l-filters--btn');
             </tr>
             <tr>
                 <td colspan="3">
-                    <img src="./overview/img/filters-4.svg" alt="" width=100%>
+                    <img style="max-width:600px" src="./overview/img/filters-4.svg" alt="" width=100%>
                 </td>
             </tr>
             <tr>
@@ -208,12 +191,12 @@ const buttons = document.querySelectorAll('.l-filters--btn');
                     <p class="text-gray-11">:active</p>
                 </td>
                 <td colspan="3">
-                    <img src="./overview/img/filters-5.svg" alt="" width=100px>
+                    <img style="max-width:600px" src="./overview/img/filters-5.svg" alt="" width=100px>
                 </td>
             </tr>
             <tr>
                 <td colspan="3">
-                    <b>選項按鈕、全選按鈕</b>
+                    <b>選項按鈕、展開收合按鈕</b>
                     <ul class="pl-3 my-1">
                         <li>background-color:#00a19b</li>
                         <li>border:solid 1px #00a19b</li>
@@ -222,7 +205,7 @@ const buttons = document.querySelectorAll('.l-filters--btn');
             </tr>
             <tr>
                 <td colspan="3">
-                    <img src="./overview/img/filters-6.svg" alt="" width=100%>
+                    <img style="max-width:600px" src="./overview/img/filters-6.svg" alt="" width=100%>
                 </td>
             </tr>
             <tr>
@@ -237,7 +220,7 @@ const buttons = document.querySelectorAll('.l-filters--btn');
                     <p class="text-gray-11">group type</p>
                 </td>
                 <td colspan="3">
-                    <img src="./overview/img/filters-7.svg" alt="" width=100%>
+                    <img style="max-width:600px" src="./overview/img/filters-7.svg" alt="" width=100%>
                 </td>
             </tr>
             <tr>
@@ -252,7 +235,7 @@ const buttons = document.querySelectorAll('.l-filters--btn');
                     <p class="text-gray-11">group type:active</p>
                 </td>
                 <td colspan="3">
-                    <img src="./overview/img/filters-8.svg" alt="" width=100%>
+                    <img style="max-width:600px" src="./overview/img/filters-8.svg" alt="" width=100%>
                 </td>
             </tr>
             <tr>
